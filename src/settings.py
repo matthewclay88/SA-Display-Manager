@@ -3,8 +3,15 @@ SA Display Manager
 settings.py
 
 Application-wide configuration values.
-These are the only values that should normally be edited
-when adding new dashboards or changing defaults.
+
+This module defines:
+- application metadata
+- default slideshow settings
+- supported dashboards
+- default dashboard selection
+- backup behavior
+
+Most future configuration changes should only require editing this file.
 """
 
 # -------------------------------------------------------------------
@@ -12,7 +19,7 @@ when adding new dashboards or changing defaults.
 # -------------------------------------------------------------------
 
 APP_NAME = "SA Display Manager"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0"
 
 # -------------------------------------------------------------------
 # Default Slideshow Settings
@@ -27,7 +34,16 @@ DEFAULT_INTERVAL = 20  # seconds
 # to a different file from the application if necessary.
 # -------------------------------------------------------------------
 
-DEFAULT_WHITEBOARD = r"Z:\SA_Display\whiteboard.php"
+DEFAULT_WHITEBOARD_PATH = r"Z:\SA_Display\whiteboard.php"
+
+# -------------------------------------------------------------------
+# Supported File Types
+# -------------------------------------------------------------------
+
+SUPPORTED_EXTENSIONS = (
+    ".php",
+)
+
 
 # -------------------------------------------------------------------
 # Available Dashboards
@@ -43,8 +59,11 @@ DASHBOARDS = {
     "Calendar":
         "https://matthewclay88.github.io/dss-dashboard-tv/calendar.html",
 
-    "Recreation":
+    "Lake Champlain Recreation":
         "https://matthewclay88.github.io/dss-dashboard-tv/recreation.html",
+
+    "Mountain Recreation":
+        "https://matthewclay88.github.io/dss-dashboard-tv/recreation_winter.html",
 }
 
 # -------------------------------------------------------------------
@@ -56,5 +75,10 @@ DASHBOARDS = {
 DEFAULT_ENABLED = [
     "DSS Dashboard",
     "Calendar",
-    "Recreation",
 ]
+
+# -------------------------------------------------------------------
+# Backup Settings
+# -------------------------------------------------------------------
+
+BACKUP_EXTENSION = ".bak"
