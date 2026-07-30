@@ -64,6 +64,9 @@ DASHBOARDS = {
 
     "Mountain Recreation":
         "https://matthewclay88.github.io/dss-dashboard-tv/recreation_winter.html",
+
+    "Current Products":
+        "https://matthewclay88.github.io/dss-dashboard-tv/products.html",
 }
 
 # -------------------------------------------------------------------
