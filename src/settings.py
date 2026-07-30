@@ -68,7 +68,7 @@ DASHBOARDS = {
     "Current Products":
         "https://matthewclay88.github.io/dss-dashboard-tv/products.html",
 
-    "Verification:"
+    "Verification":
         "https://matthewclay88.github.io/dss-dashboard-tv/verification.html",
 }
 
